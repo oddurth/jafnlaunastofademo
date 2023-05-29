@@ -129,6 +129,7 @@ textarea {
     align-items: center;
     color: white;
     cursor: pointer;
+    margin-bottom: 10vw;
 }
 
 .question__buttonsec {
@@ -350,4 +351,8 @@ strong{
     .home__buttonsecond {
         width: 90vw;
     }
+}
+
+.extra__space{
+    height: 50px;
 }

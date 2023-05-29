@@ -146,18 +146,24 @@ const QuestionDemo = () => {
                                     </div>
                                 ))}
                             </div>
-                        </> ) : (
-                            <div>Engin spurning númer  {currentQuestion}</div>
-                        
+                        </>) : (
+                        <div>Engin spurning númer  {currentQuestion}</div>
+
                     )}
 
                     {selectedOption !== null && (
                         <div>
                             <h1>Næsta Spurning</h1>
 
+                            <button className='copy__button' onClick={() => copyAllQuestions()}>
+                                {copySuccess ? <span>Text copied!</span> : "Copya allt"}
+                            </button>
+
                             {filteredNextQuestion && filteredNextQuestion.length > 0 ? (
                                 <>
-                                    {filteredNextQuestion[0]["Spurning #"]}
+                                    <div>
+                                        {filteredNextQuestion[0]["Spurning #"]}
+                                    </div>
 
                                     {filteredNextQuestion.map((item, index) => (
                                         <div key={index}>
@@ -180,9 +186,7 @@ const QuestionDemo = () => {
                                 <p>Spurningaleið endar hér.</p>
                             )}
 
-                            <button className='copy__button' onClick={() => copyAllQuestions()}>
-                                {copySuccess ? <span>Text copied!</span> : "Copya allt"}
-                            </button>
+
                         </div>
                     )}
 
@@ -191,6 +195,10 @@ const QuestionDemo = () => {
                     < div className="question__buttonprim"
                         onClick={() => { handleNext() }}>
                         Næsta
+                    </div>
+
+                    <div className='extra__space'>
+
                     </div>
                 </>
             ) : (
