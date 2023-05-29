@@ -1,0 +1,353 @@
+.qscreen__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.qscreen__leftcontainer {
+    width: 20vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    flex-direction: column;
+}
+
+.qscreen__lefttitle {
+    font-size: 1.8vw;
+    letter-spacing: -0.03vw;
+}
+
+.qscreen__leftinfo {
+    font-size: 1.0vw;
+    color: #BABABA;
+    letter-spacing: -0.03vw;
+}
+
+.qscreen__rightcontainer {
+    width: 70vw;
+    background-color: #FBF4FF;
+    height: 93vh;
+    border-radius: 40px 0px 0px 0px;
+    padding: 10vw;
+}
+
+.question__container {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.question__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3.5vh;
+    color: #BABABA;
+}
+
+.question__back {
+    cursor: pointer;
+    color: #BABABA;
+}
+
+.question__main {
+    font-size: 2vw;
+    letter-spacing: -0.04vw;
+}
+
+.question__sec {
+    color: #BABABA;
+    letter-spacing: -0.02vw;
+}
+
+input {
+    width: 100%;
+    height: 9vh;
+    font-size: 2em;
+    text-align: center;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    padding: 0.5em;
+    border: none;
+    /* remove the border */
+    border-radius: 20px;
+    /* set the border radius to 20px */
+    outline: none;
+    /* remove the outline */
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.02vw;
+}
+
+textarea {
+    width: 60vw;
+    height: 1vh;
+    font-size: 2em;
+    text-align: center;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    border: none;
+    /* remove the border */
+    border-radius: 20px;
+    /* set the border radius to 20px */
+    outline: none;
+    /* remove the outline */
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.02vw;
+    resize: none;
+
+}
+
+
+.question__buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.question__buttons * {
+    cursor: pointer;
+    font-size: 1.5vw;
+    letter-spacing: -0.03vw;
+}
+
+.question__buttonprim {
+    width: 50%;
+    background-color: #EEB31A;
+    border-radius: 13px;
+    height: 9.4vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.question__buttonsec {
+    width: 50%;
+    background-color: white;
+    border-radius: 13px;
+    margin-right: 2vw;
+    display: flex;
+    justify-content: center;
+    height: 9.4vh;
+    align-items: center;
+    color: #EEB31A;
+    border: solid;
+    border-width: 0.2vw;
+    box-sizing: border-box;
+}
+
+@media (max-width: 550px) {
+    .qscreen__container {
+        flex-direction: column;
+    }
+
+    .qscreen__rightcontainer {
+        width: 80vw;
+    }
+
+    .question__main {
+        font-size: 5vw;
+        letter-spacing: -0.04vw;
+    }
+
+    .question__buttons * {
+        cursor: pointer;
+        font-size: 4vw;
+        letter-spacing: -0.13w;
+    }
+
+    .qscreen__leftcontainer {
+        width: 20vw;
+        height: 10vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        flex-direction: row;
+    }
+
+    .qscreen__lefttitle {
+        font-size: 1.8vw;
+        letter-spacing: -0.03vw;
+    }
+
+    .qscreen__leftinfo {
+        font-size: 1.0vw;
+        color: #BABABA;
+        letter-spacing: -0.03vw;
+    }
+}
+
+.option__bar {
+    display: flex;
+    align-items: center;
+}
+
+.option__bar button {
+    background: none;
+    border: none;
+    background-color: #b4b4b4;
+    border-radius: 30px;
+    cursor: pointer;
+
+
+    width: 25px;
+    height: 25px;
+
+}
+
+
+.option__bar .button__selected {
+    background-color: #EEB31A;
+}
+
+.option__bar .button__selected .option__inside {
+    background-color: #EEB31A;
+}
+
+.option__question {
+    margin-left: 20px;
+}
+
+.option__inside {
+    width: 19px;
+    height: 19px;
+    background-color: white;
+    border-radius: 30px;
+    transform: translate(-3px);
+}
+
+.options__questiontitle {
+    color: #BABABA;
+}
+
+.demoscreen__container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FBF4FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.demoscreen__qcontainer {
+    width: 40vw;
+    height: 50vh;
+    margin-top: -10vh;
+}
+
+.copy__button {
+    background: none;
+    border: solid 1px rgb(208, 208, 208);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+strong{
+    text-decoration: underline;
+}
+
+.home__container{
+    width: 100vw;
+    overflow: hidden;
+}
+
+.home__landingtext {
+    font-size: 4.0vw;
+    width: 40vw;
+    margin-left: 5vw;
+    letter-spacing: -0.1vw;
+
+    margin-top: 20vh;
+    z-index: 99;
+}
+
+.orange-text {
+    color: orange;
+    /* set the color of the div to orange */
+    display: block;
+    /* make the div a block element */
+}
+
+.home__buttons {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5vw;
+    font-size: 1.5vw;
+    letter-spacing: -0.05vw;
+    margin-top: 2vh;
+    filter: drop-shadow(3px 3px 5px #e6e6e6);
+}
+
+.home__buttons * {
+    cursor: pointer;
+}
+
+.home__buttonmain {
+    width: 15vw;
+    background-color: #EEB31A;
+    border-radius: 13px;
+    height: 9.4vh;
+    margin-right: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.home__buttonsecond {
+    width: 15vw;
+    background-color: white;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    height: 9.4vh;
+    align-items: center;
+    color: #EEB31A;
+    border: solid;
+    border-width: 0.2vw;
+    box-sizing: border-box;
+}
+
+.home__img {
+    position: absolute;
+    z-index: -1;
+    margin-left: 27vw;
+    margin-top: 5vh;
+    max-width: 100vw;
+}
+
+@media (max-width: 550px) {
+    .home__landingtext {
+        font-size: 10vw;
+        width: 100vw;
+    }
+
+    .home__buttons {
+        display: flex;
+        flex-direction: column;
+        font-size: 5vw;
+    }
+
+    .home__buttonmain {
+        width: 90vw;
+        margin-bottom: 2vh;
+    }
+
+    .home__buttonsecond {
+        width: 90vw;
+    }
+}
