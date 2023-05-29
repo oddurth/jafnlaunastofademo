@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/jafnlaunastofademo/static/css/main.fb793cf5.css",
+    "main.js": "/jafnlaunastofademo/static/js/main.3ec7dbf9.js",
+    "index.html": "/jafnlaunastofademo/index.html",
+    "main.fb793cf5.css.map": "/jafnlaunastofademo/static/css/main.fb793cf5.css.map",
+    "main.3ec7dbf9.js.map": "/jafnlaunastofademo/static/js/main.3ec7dbf9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb793cf5.css",
+    "static/js/main.3ec7dbf9.js"
+  ]
+}
