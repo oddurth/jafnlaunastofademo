@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import data from './data4.json';
 import './questions.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const QuestionDemo = () => {
     const [currentQuestion, setCurrentQuestion] = useState("101");
@@ -99,6 +101,12 @@ const QuestionDemo = () => {
         <div>
             {!showResults ? (
                 <>
+                    <div className='search__icon'
+                    onClick={handleFormSubmit}
+                    >
+                        <FontAwesomeIcon icon={faSearch} />
+                    </div>
+
                     <div>
                         <form onSubmit={handleFormSubmit}>
                             <input
@@ -106,9 +114,14 @@ const QuestionDemo = () => {
                                 value={searchTerm}
                                 onChange={handleInputChange}
                                 placeholder="Spurninganúmer"
+                                className='input__question'
                             ></input>
                         </form>
                     </div>
+
+
+
+
                     <div className="question__back">
                         {previousQuestions && (
                             <div onClick={handleBack}>

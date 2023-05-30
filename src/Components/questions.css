@@ -356,3 +356,26 @@ strong{
 .extra__space{
     height: 50px;
 }
+
+.input__question{
+    height: 50px;
+    font-size: 23px;
+    border-radius: 10px;
+}
+
+.search__icon{
+    color: #BABABA;
+    position: absolute;
+    transform: translate(38vw, 45px);
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: #bababa;
+  }
+
+@media (max-width: 580px) {
+    .search__icon{
+        display: none;
+    }
+}
