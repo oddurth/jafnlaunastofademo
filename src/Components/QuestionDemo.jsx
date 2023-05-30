@@ -23,6 +23,7 @@ const QuestionDemo = () => {
     // Function to handle response selection
     const handleSelect = (nextQuestion, index) => {
         //if (nextQuestion !== "#") {
+        setSearchTerm("");
         setNextQ(nextQuestion);
         // }
         setAnswers([...answers, filteredQuestions[index]]);
