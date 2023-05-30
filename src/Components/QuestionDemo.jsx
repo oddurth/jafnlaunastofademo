@@ -24,7 +24,7 @@ const QuestionDemo = () => {
     const isQuestionValid = filteredQuestions.length > 0;
     const isNextQuestionValid = filteredNextQuestion.length > 0;
 
-    
+
 
     // Function to handle response selection
     const handleSelect = (nextQuestion, index) => {
@@ -32,7 +32,7 @@ const QuestionDemo = () => {
         setSearchTerm("");
         setNextQ(nextQuestion);
         // }
-       // setAnswers([...answers, filteredQuestions[index]]);
+        // setAnswers([...answers, filteredQuestions[index]]);
         setSelectedOption(index);
     }
 
@@ -77,7 +77,7 @@ const QuestionDemo = () => {
             if (selectedOption !== null) {
                 setAnswers(prevAnswers => [...prevAnswers, filteredQuestions[selectedOption]]);
             }
-    
+
             setPreviousQuestions(prevQuestions => [...prevQuestions, currentQuestion]);
             setCurrentQuestion(nextQ);
         } else {
@@ -120,7 +120,7 @@ const QuestionDemo = () => {
             {!showResults ? (
                 <>
                     <div className='search__icon'
-                    onClick={handleFormSubmit}
+                        onClick={handleFormSubmit}
                     >
                         <FontAwesomeIcon icon={faSearch} />
                     </div>
@@ -247,8 +247,13 @@ const QuestionDemo = () => {
                         </div>
                     ))}
                     <button onClick={exportToExcel}
-                    className='copy__button'
+                        className='copy__button2'
                     >Flytja yfir í Excel</button>
+
+
+                    <div className='extra__space'>
+
+                    </div>
                 </div>
             )
             }

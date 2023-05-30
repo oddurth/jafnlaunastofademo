@@ -257,6 +257,15 @@ textarea {
     border-radius: 5px;
 }
 
+.copy__button2 {
+    background: none;
+    border: solid 1px rgb(208, 208, 208);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 strong{
     text-decoration: underline;
 }
@@ -381,5 +390,9 @@ input::placeholder {
 }
 
 .copy__button{
+    cursor: pointer;
+}
+
+.copy__button2{
     cursor: pointer;
 }
