@@ -32,7 +32,7 @@ const QuestionDemo = () => {
         setSearchTerm("");
         setNextQ(nextQuestion);
         // }
-        setAnswers([...answers, filteredQuestions[index]]);
+       // setAnswers([...answers, filteredQuestions[index]]);
         setSelectedOption(index);
     }
 
@@ -72,11 +72,16 @@ const QuestionDemo = () => {
 
 
     const handleNext = () => {
-        console.log(nextQ);
         if (nextQ !== "#") {
+            // add the currently selected question to the answers array
+            if (selectedOption !== null) {
+                setAnswers(prevAnswers => [...prevAnswers, filteredQuestions[selectedOption]]);
+            }
+    
             setPreviousQuestions(prevQuestions => [...prevQuestions, currentQuestion]);
             setCurrentQuestion(nextQ);
         } else {
+            setAnswers(prevAnswers => [...prevAnswers, filteredQuestions[selectedOption]]);
             setShowResults(true);
         }
         setSelectedOption(null);
