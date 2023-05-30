@@ -4,6 +4,8 @@ import './questions.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
+import * as XLSX from 'xlsx';
+
 const QuestionDemo = () => {
     const [currentQuestion, setCurrentQuestion] = useState("101");
     const [nextQ, setNextQ] = useState("101");
@@ -21,6 +23,8 @@ const QuestionDemo = () => {
 
     const isQuestionValid = filteredQuestions.length > 0;
     const isNextQuestionValid = filteredNextQuestion.length > 0;
+
+    
 
     // Function to handle response selection
     const handleSelect = (nextQuestion, index) => {
@@ -55,6 +59,14 @@ const QuestionDemo = () => {
             console.error('Async: Could not copy text: ', err);
         });
     };
+
+
+    const exportToExcel = () => {
+        const wb = XLSX.utils.book_new();
+        const ws = XLSX.utils.json_to_sheet(answers);
+        XLSX.utils.book_append_sheet(wb, ws, "Answers");
+        XLSX.writeFile(wb, "answers.xlsx");
+    }
 
 
 
@@ -228,6 +240,9 @@ const QuestionDemo = () => {
                             </p>
                         </div>
                     ))}
+                    <button onClick={exportToExcel}
+                    className='copy__button'
+                    >Flytja yfir í Excel</button>
                 </div>
             )
             }

@@ -379,3 +379,7 @@ input::placeholder {
         display: none;
     }
 }
+
+.copy__button{
+    cursor: pointer;
+}
