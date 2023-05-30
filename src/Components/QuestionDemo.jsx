@@ -103,6 +103,7 @@ const QuestionDemo = () => {
     };
 
     const handleFormSubmit = (event) => {
+        setAnswers([]);
         event.preventDefault();
         setCurrentQuestion(searchTerm);
         setSelectedOption(null);
