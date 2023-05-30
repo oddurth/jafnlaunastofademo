@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/jafnlaunastofademo/static/css/main.76c87314.css",
-    "main.js": "/jafnlaunastofademo/static/js/main.d8035971.js",
+    "main.js": "/jafnlaunastofademo/static/js/main.dada225a.js",
     "index.html": "/jafnlaunastofademo/index.html",
     "main.76c87314.css.map": "/jafnlaunastofademo/static/css/main.76c87314.css.map",
-    "main.d8035971.js.map": "/jafnlaunastofademo/static/js/main.d8035971.js.map"
+    "main.dada225a.js.map": "/jafnlaunastofademo/static/js/main.dada225a.js.map"
   },
   "entrypoints": [
     "static/css/main.76c87314.css",
-    "static/js/main.d8035971.js"
+    "static/js/main.dada225a.js"
   ]
 }
