@@ -138,96 +138,106 @@ const QuestionDemo = () => {
                     </div>
 
 
-
-
-                    <div className="question__back">
-                        {previousQuestions && (
-                            <div onClick={handleBack}>
-                                &lt; Til Baka
+                    <div className='question__flexcontainer'>
+                        <div className='question__questionbar'>
+                            <div className="question__back">
+                                {previousQuestions && (
+                                    <div onClick={handleBack}>
+                                        &lt; Til Baka
+                                    </div>
+                                )}
                             </div>
-                        )}
-                    </div>
-                    {isQuestionValid ? (
-                        <>
-                            <div>
-                                <div>
-                                    {filteredQuestions[0]["Þáttur "]}
-                                    {filteredQuestions[0]["Spurning #"]}
-                                </div>
-                                {filteredQuestions.map((item, index) => (
-                                    <div key={index}>
+                            {isQuestionValid ? (
+                                <>
+                                    <div>
+                                        <div>
+                                            {filteredQuestions[0]["Þáttur "]}
+                                            {filteredQuestions[0]["Spurning #"]}
+                                        </div>
+                                        {filteredQuestions.map((item, index) => (
+                                            <div key={index}>
 
-                                        <div className="option__bar">
-                                            <button
-                                                className={selectedOption === index ? 'button__selected' : ''}
-                                                onClick={() => handleSelect(item["Næsta spurning. "], index)}
-                                            >
+                                                <div className="option__bar">
+                                                    <button
+                                                        className={selectedOption === index ? 'button__selected' : ''}
+                                                        onClick={() => handleSelect(item["Næsta spurning. "], index)}
+                                                    >
 
-                                                <div className='option__inside'>
+                                                        <div className='option__inside'>
+
+                                                        </div>
+
+                                                    </button>
+                                                    <p
+                                                        className='option__question'
+                                                        dangerouslySetInnerHTML={parseBoldText(item["Spurning með valmöguleika"].slice(3))}>
+                                                    </p>
 
                                                 </div>
 
-                                            </button>
-                                            <p
-                                                className='option__question'
-                                                dangerouslySetInnerHTML={parseBoldText(item["Spurning með valmöguleika"].slice(3))}>
-                                            </p>
-
-                                        </div>
-
-                                    </div>
-                                ))}
-                            </div>
-                        </>) : (
-                        <div>Engin spurning númer  {currentQuestion}</div>
-
-                    )}
-
-                    {selectedOption !== null && (
-                        <div>
-                            <h1>Næsta Spurning</h1>
-
-                            <button className='copy__button' onClick={() => copyAllQuestions()}>
-                                {copySuccess ? <span>Text copied!</span> : "Copya allt"}
-                            </button>
-
-                            {filteredNextQuestion && filteredNextQuestion.length > 0 ? (
-                                <>
-                                    <div>
-                                        {filteredNextQuestion[0]["Spurning #"]}
-                                    </div>
-
-                                    {filteredNextQuestion.map((item, index) => (
-                                        <div key={index}>
-                                            <p
-                                                className='option__question'
-                                                dangerouslySetInnerHTML={parseBoldText(item["Spurning með valmöguleika"].slice(3))}
-                                            ></p>
-
-                                            <div>
-                                                <button className='copy__button' onClick={() => copyToClipboard(index)}>
-                                                    {copySuccess === index ? <span>Text copied!</span> : "Copy"}
-                                                </button>
-
-
                                             </div>
-                                        </div>
-                                    ))}
-                                </>
-                            ) : (
-                                <p>Spurningaleið endar hér.</p>
+                                        ))}
+                                    </div>
+                                </>) : (
+                                <div>Engin spurning númer  {currentQuestion}</div>
+
                             )}
 
-
                         </div>
-                    )}
+
+                        {selectedOption !== null && (
+                            <div className='question__nextquestionbar'>
+                                <div className='question__nextquestiontitle' >Næsta Spurning</div>
+
+                                <button className='copy__button' onClick={() => copyAllQuestions()}>
+                                    {copySuccess ? <span>Text copied!</span> : "Copya allt"}
+                                </button>
+
+                                {filteredNextQuestion && filteredNextQuestion.length > 0 ? (
+                                    <>
+                                        <div>
+                                            {filteredNextQuestion[0]["Spurning #"]}
+                                        </div>
+
+                                        {filteredNextQuestion.map((item, index) => (
+                                            <div key={index}>
+                                                <p
+                                                    className='option__question'
+                                                    dangerouslySetInnerHTML={parseBoldText(item["Spurning með valmöguleika"].slice(3))}
+                                                ></p>
+
+                                                <div>
+                                                    <button className='copy__button' onClick={() => copyToClipboard(index)}>
+                                                        {copySuccess === index ? <span>Text copied!</span> : "Copy"}
+                                                    </button>
+
+                                                    <div className="question__line">
+
+                                                    </div>
 
 
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </>
+                                ) : (
+                                    <p>Spurningaleið endar hér.</p>
+                                )}
 
-                    < div className="question__buttonprim"
-                        onClick={() => { handleNext() }}>
-                        Næsta
+                                < div className="question__buttonprim"
+                                    onClick={() => { handleNext() }}>
+                                    Næsta
+                                </div>
+
+
+                            </div>
+                        )}
+
+
                     </div>
+
+
+
 
                     <div className='extra__space'>
 

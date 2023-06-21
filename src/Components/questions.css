@@ -243,7 +243,7 @@ textarea {
 }
 
 .demoscreen__qcontainer {
-    width: 40vw;
+    width: 80vw;
     height: 50vh;
     margin-top: -10vh;
 }
@@ -255,6 +255,7 @@ textarea {
     font-weight: 500;
     padding: 5px;
     border-radius: 5px;
+    display: none;
 }
 
 .copy__button2 {
@@ -266,11 +267,11 @@ textarea {
     border-radius: 5px;
 }
 
-strong{
+strong {
     text-decoration: underline;
 }
 
-.home__container{
+.home__container {
     width: 100vw;
     overflow: hidden;
 }
@@ -362,17 +363,18 @@ strong{
     }
 }
 
-.extra__space{
+.extra__space {
     height: 50px;
 }
 
-.input__question{
+.input__question {
     height: 50px;
     font-size: 23px;
     border-radius: 10px;
+    width: 48.5%;
 }
 
-.search__icon{
+.search__icon {
     color: #BABABA;
     position: absolute;
     transform: translate(38vw, 45px);
@@ -381,18 +383,47 @@ strong{
 
 input::placeholder {
     color: #bababa;
-  }
+}
 
 @media (max-width: 580px) {
-    .search__icon{
+    .search__icon {
         display: none;
     }
 }
 
-.copy__button{
+.copy__button {
     cursor: pointer;
 }
 
-.copy__button2{
+.copy__button2 {
     cursor: pointer;
+}
+
+.question__flexcontainer {
+    display: flex;
+}
+
+.question__questionbar {
+    flex: 1;
+    max-width: 50%;
+}
+
+.question__nextquestionbar {
+    flex: 1;
+}
+
+h1{
+    font-size: 25px;
+}
+
+.question__nextquestiontitle{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.question__line{
+    background-color: #bababa6d;
+    width: 100%;
+    height: 1px;
+    margin-bottom: 10px;
 }
